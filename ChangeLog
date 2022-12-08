@@ -1,0 +1,125 @@
+Betsie ChangeLog
+================
+
+2002-06-25 1.5.12
+	* - Fixed cross site scripting vulnerability bug. Argh.
+	* - Fixed basic authentication to work with post not get
+	
+2002-05-13 1.5.11
+	* - Fixed bug where QUERY_STRING was still referred to not $qs
+	* - Fixed bug where ':' was not an allowed char so odd ports
+	numbers weren't actually supported out-of-the-box
+	
+	
+2002-04-22 1.5.11
+	* - Fixed bug in alarm sub when timing out on a connect
+	* - Various other fixes
+	
+2001-08-07
+	* - Fixed meta-refresh bug for case refreshing to same page under
+	100 seconds and full http:// url given.
+	
+2001-07-05 1.5.10
+	* - Fixed Content-Length bug. Now we pass on arbitrary headers, we
+	cannot pass this on, because we cannot set it correctly.
+
+2001-05-03 1.5.9
+
+	* - Moved allowed characters to single variable 
+	* - Added code to handle basic authentication. Seems to
+	work. Needs more testing.
+	* - Made all HTML html (lower case) in preparation for xhtml
+	compliance later
+
+2001-04-?? 1.5.8
+
+	* - Added code to move other arbitrary blocks of code around
+	* - Changed nonsense 'minutes' to 'seconds' in alarm timeout
+
+2001-04-19 1.5.7
+
+	* - Added + to allow chars (oops)
+	* - Added code to remove links to self
+	* - Restored move_nav (oops)
+	* - Released this version.
+	
+2001-04-09 1.5.6
+	
+	* - Fixed for BBC nav 5 changes
+
+2001-04-06 1.5.5
+	
+	* - Added rudimentary TH support (doh!)
+	* - Added support for non-standard port numbers
+	* - Removed some uninitialised value warnings
+	* - Added support for attributes of HTML tag
+	* - Fixed buggy FRAMESET handling
+	* - Added ~ to allowed characters in URL
+	* - Added basic cookie support
+
+2001-04-05 1.5.4	
+
+	* - Removed qw from colour definitions to lose warning
+	* - Added % to allowed characters in URL
+	* - Fixed default setstr value not actually being default
+	* - Fixed numeric directory / settings string confusion problem
+	* - Fixed braindead maxpost stupidity
+	* - Fixed localhost confusion - now seperate var from $domain
+	* - Fixed overkeen spaced out letters fixer
+	* - Fixed bug with body tags with a newline just before the >
+	* - Fixed bug with non-text files being mistakenly parsed
+	* - Code cleaned up a bit
+
+2000-09-04 1.5.3	
+
+	* - Fixed robot meta exclusion properly
+
+2000-??-?? 1.5.2
+	
+	* - Other referrer bug fixed (now allows '&' and '=' too)
+	* - Made grab_url use $localhost and connect to 127.0.0.1 if sensible
+
+2000-??-?? 1.5.1
+
+	* - referrer bug fixed (now allows '?')
+
+1999-12-15 1.5
+
+	* - Made move_nav a seperate subroutine
+	* - Fixed anchors bug in auto-detected referers
+	* - Cleaned up code some.
+	* - Added some notion of changeable settings
+
+1999-12-13 1.4.1
+
+	* - added ugly hacks to handle new templates on news and online.
+	* - allowed safe list to specify full domain name (doh!)
+
+1999-11-29 1.4
+	
+	* - now adds robot excluding meta tag. oops.
+
+1999-11-23 1.3
+
+	* - added input via HTTP_REFERER
+	* - changed 'Unparsed version' to 'Graphical version'
+	* - added minimal http1.1 support (to give beeb.com a chance)
+	*   is simply Host: line in geturl routine
+	* - added various new bbc sites to safe list 
+	* - fixed recursion bug where betsie could call itself. shouldn't
+	happen.
+	* - support for stylesheets and image maps (webwise now works)
+	* - better handling of frames
+	* - now using yellow text on black background for ease of reading
+	for visually impaired
+
+1999-??-?? 1.2, 1.1
+
+	* - Various attempts to be clever. Failed, unreleased. Never mind.
+	I only mention them for the sake of completeness.
+
+1999-03-?? 1.0
+
+	* - First release some point March 1999
+
+	
